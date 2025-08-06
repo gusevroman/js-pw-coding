@@ -1,0 +1,13 @@
+{
+  "name": "playwright-interview",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "start": "npx http-server ./server -p 3000"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "http-server": "^14.1.1"
+  }
+}

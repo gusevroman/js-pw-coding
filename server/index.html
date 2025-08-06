@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <input id="username" placeholder="Username">
+  <input id="password" type="password" placeholder="Password">
+  <button id="loginBtn">Login</button>
+
+  <p id="error" style="color: red;"></p>
+  <h2 id="welcome"></h2>
+
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        document.getElementById('error').innerText = 'Please enter username and password';
+        document.getElementById('welcome').innerText = '';
+      } else {
+        document.getElementById('error').innerText = '';
+        document.getElementById('welcome').innerText = `Welcome ${username}`;
+      }
+    });
+  </script>
+</body>
+</html>
